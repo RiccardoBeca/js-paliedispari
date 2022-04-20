@@ -10,18 +10,39 @@ Bonus: L’inserimento avviene tramite un campo input
 */
 
 
-const pariDispari = prompt("Pari o Dispari?")
+let controlFlag = false;
+let pariDispari;
 
+while (!controlFlag){
+  
+  pariDispari = prompt("Pari o Dispari?")
 
-
-
-if (pariDispari !== ("Pari" || "Dispari")) {
-  
-  document.getElementById("output-text").innerHTML =  "Perfavore scegli tra Pari o Dispari";
-  
-}else {
-  
-  const chooseNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-  
+  if (pariDispari !== ("Pari" || "Dispari")) {
+    alert ("Perfavore scegli tra Pari o Dispari");
+    // document.getElementById("output-text").innerHTML =  "Perfavore scegli tra Pari o Dispari";
+    
+  }else{
+    controlFlag = true;
+    
+  }
 }
+
+let secondControlFlag = false;
+
+let chooseNumber;
+
+while (!secondControlFlag) {
+  
+  chooseNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
+  if (chooseNumber < 1 || chooseNumber > 5) {
+    alert("Ti ho detto di inserire un numero da 1 a 5!!");
+  }else{
+    secondControlFlag = true;
+  }
+
+}
+
+
+
 
