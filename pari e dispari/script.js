@@ -44,5 +44,16 @@ while (!secondControlFlag) {
 }
 
 
+function randomNumber(){
+  
+  return Math.floor(Math.random() * 5);
+}
+const computerNumber = randomNumber();
+
+console.log(computerNumber);
 
 
+
+const sum = chooseNumber + computerNumber;
+
+console.log(sum);
