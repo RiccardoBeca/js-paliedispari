@@ -46,7 +46,7 @@ while (!secondControlFlag) {
 
 function randomNumber(){
   
-  return Math.floor(Math.random() * 5);
+  return Math.ceil(Math.random() * 5);
 }
 const computerNumber = randomNumber();
 
@@ -57,3 +57,24 @@ console.log(computerNumber);
 const sum = chooseNumber + computerNumber;
 
 console.log(sum);
+
+
+function isSumPari(num) {
+  let risultato = "Dispari";
+  if (num % 2 === 0) {
+    risultato = "Pari"
+  }
+  return risultato;
+}
+
+const risultatoFinale = isSumPari(sum);
+
+console.log(risultatoFinale);
+
+if ( risultatoFinale === pariDispari) {
+  alert("user wins");
+}else {
+  alert("computer wins")
+}
+
+
