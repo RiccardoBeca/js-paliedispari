@@ -14,9 +14,9 @@ Bonus: L’inserimento avviene tramite un campo input
 const userWord = prompt("Please insert a word");
 
 function isPalindrome(string) {
-
+ 
   const wordLength = string.length - 1;
-// scandaglio meta' stringa per controllare il primo elemento  con l'ultimo incrementando il valore di [i]
+ // scandaglio meta' stringa per controllare il primo elemento  con l'ultimo incrementando il valore di [i]
   for (let i = 0; i < wordLength / 2; i++) {
 
     if (string[i] !== string[wordLength - i] ) {
@@ -27,6 +27,6 @@ function isPalindrome(string) {
   } 
 
 }
-//  chiamo funzione
+//  chiamo funzione inserendo userWord che sara' la stringa inserita dall'utente
 isPalindrome(userWord);
 
