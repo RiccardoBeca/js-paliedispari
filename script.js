@@ -10,6 +10,23 @@ Bonus: L’inserimento avviene tramite un campo input
 */
 
 
-const insertWord = prompt("Please insert a word");
+// chiedo la parola
+const userWord = prompt("Please insert a word");
 
-function isPalindrome()
+function isPalindrome(string) {
+
+  const wordLength = string.length - 1;
+// scandaglio meta' stringa per controllare il primo elemento  con l'ultimo incrementando il valore di [i]
+  for (let i = 0; i < wordLength / 2; i++) {
+
+    if (string[i] !== string[wordLength - i] ) {
+      return document.getElementById("output-text").innerHTML = "Questa parola non e' palindroma";
+    }
+
+    return document.getElementById("output-text").innerHTML = "Questa parola  e' palindroma";
+  } 
+
+}
+//  chiamo funzione
+isPalindrome(userWord);
+
